@@ -20,7 +20,14 @@ func ScaleFunc(v *Vertex, f float64) {
 
 func main() {
 	v := Vertex{3, 4}
+
+	// METHODS with a pointer RECEIVER take either a value or a pointer as the receiver
+	// as a convenience, Go interprets the statement v.Scale(5) as (&v).Scale(5), b/c Scale has a
+	// pointer receiver
 	v.Scale(2)
+
+	// functions with a pointer argument MUST take a pointer
+	// ScaleFunc(v, 10) -> compile error!
 	ScaleFunc(&v, 10)
 
 	p := &Vertex{4, 3}

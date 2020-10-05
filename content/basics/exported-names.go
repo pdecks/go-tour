@@ -8,5 +8,5 @@ import (
 )
 
 func main() {
-	fmt.Println(math.pi)
+	fmt.Println(math.Pi) // exported names start with a capital letter, so this should be "Pi" not "pi"
 }

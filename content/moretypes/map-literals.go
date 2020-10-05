@@ -8,6 +8,7 @@ type Vertex struct {
 	Lat, Long float64
 }
 
+// map literals ~ struct literals, except the key is also required
 var m = map[string]Vertex{
 	"Bell Labs": Vertex{
 		40.68433, -74.39967,

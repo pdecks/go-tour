@@ -13,7 +13,9 @@ type T struct {
 }
 
 // This method means type T implements the interface I,
-// but we don't need to explicitly declare that it does so.
+// but we DO NOT need to explicitly declare that it does so (i.e. do not use "implements" keyword)
+// this decouples the definition of an interface from its implementation which could
+// then appear in any package without prearrangement
 func (t T) M() {
 	fmt.Println(t.S)
 }

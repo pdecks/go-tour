@@ -17,8 +17,11 @@ func needFloat(x float64) float64 {
 	return x * 0.1
 }
 
+// an untyped constant takes the type needed by its context
 func main() {
 	fmt.Println(needInt(Small))
 	fmt.Println(needFloat(Small))
 	fmt.Println(needFloat(Big))
+	// because an _int_ can store a 64-bit integer (max), the following would overflow
+	// fmt.Println(needInt(Big))
 }

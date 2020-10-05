@@ -26,11 +26,15 @@ func main() {
 	var t *T
 	i = t
 	describe(i)
+	// if the concrete value inside the interface itself is nil, the method will be called
+	// with a nil receiver
+	// interface value (*T<nil struct>, *main.T) [in package main]
+	// NOTE: an interface value that holds a nil concrete value (*T) is ITSELF NON-NIL
 	i.M()
 
 	i = &T{"hello"}
 	describe(i)
-	i.M()
+	i.M() // interface value (&{hello}, *main.T)
 }
 
 func describe(i I) {

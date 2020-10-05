@@ -17,4 +17,9 @@ var (
 
 func main() {
 	fmt.Println(v1, p, v2, v3)
+	fmt.Printf("v1: %v\n", v1)
+	q := &v1
+	q.X = 12
+	fmt.Printf("v1 updated through pointer: %v\n", v1)
+	fmt.Println(v1, p, v2, v3) // showing that p is pointing to a different Vertex instance ...
 }

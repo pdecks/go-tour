@@ -11,4 +11,6 @@ func swap(x, y string) (string, string) {
 func main() {
 	a, b := swap("hello", "world")
 	fmt.Println(a, b)
+	a, b = swap(a, b) // re-assignment with 2nd swap, hence change in notation
+	fmt.Println(a, b)
 }

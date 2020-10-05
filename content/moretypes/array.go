@@ -4,6 +4,8 @@ package main
 
 import "fmt"
 
+// the type [n]T is an array of n values of type T
+// an array has a fixed size
 func main() {
 	var a [2]string
 	a[0] = "Hello"

@@ -11,6 +11,8 @@ func compute(fn func(float64, float64) float64) float64 {
 	return fn(3, 4)
 }
 
+// functions are values too and can be passed around like other values
+// function values may be used as function arguments and return values
 func main() {
 	hypot := func(x, y float64) float64 {
 		return math.Sqrt(x*x + y*y)
